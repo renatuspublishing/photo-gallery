@@ -1,0 +1,63 @@
+Lab Work: 
+- Line the thumbnails on the left side of the page, and the preview container onto the right (instead of top/bottom)
+- Add Facebook like to the page using Facebooks widget: https://developers.facebook.com/docs/plugins/like-button
+- Add captions below each image
+- Add responsive media queries, etc.
+- Open the picture in a modal window if clicked on
+- Add tooltip text to the thumbnails
+ 
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Photo Gallery in HTML & CSS</title>
+	<link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+		body{
+			background: black;
+			color: white;
+			font-family: 'Playfair Display', serif;
+			text-align: center;
+		}
+		#thumbnails{
+			width: 20%;
+    		float: left;
+		}
+		.thumbnail{
+			height: 80px;
+			border: 4px solid #555;
+			padding: 1px;
+			margin: 0 10px 10px 0;
+		}
+		.thumbnail:hover{
+			border: 4px solid #00ccff;
+			cursor: pointer;
+		}
+		#preview img{
+			width: 80%;
+		}
+	</style>
+</head>
+<body>
+	<!-- Create a wrapper for the gallery -->
+	<div id = "gallery">
+		<h2>Image Gallery in HTML and CSS</h2>
+		<!-- Create a break betewen the title and the thumbnails -->
+		<br />
+		<!-- Create a container for the thumbnails -->
+		<div id = "thumbnails">
+			<img src="images/img1.jpg" name="img1" class="thumbnail" onmouseover="preview.src=img1.src">
+			<img src="images/img2.jpg" name="img2" class="thumbnail" onmouseover="preview.src=img2.src">
+			<img src="images/img3.jpg" name="img3" class="thumbnail" onmouseover="preview.src=img3.src">
+			<img src="images/img4.jpg" name="img4" class="thumbnail" onmouseover="preview.src=img4.src">
+			<img src="images/img5.jpg" name="img5" class="thumbnail" onmouseover="preview.src=img5.src">
+		</div>
+
+		<!-- Container for the preview box -->
+		<div id="preview">
+			<img name="preview" src="images/img1.jpg">
+		</div>
+
+	</div>
+</body>
+</html>
